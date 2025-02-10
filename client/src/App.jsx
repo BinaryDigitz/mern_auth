@@ -1,9 +1,12 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { About, SignIn, SignUp, Home, Profile } from './components/exportComp.js'
+import { About, SignIn, SignUp, Home, Profile, Navbar } from './components/exportComp.js'
 function App() {
   return (
     <div className='h-scree'>
+      <header>
+          <Navbar />
+      </header>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
