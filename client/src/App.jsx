@@ -1,10 +1,17 @@
 import React from 'react'
-
+import { Routes, Route } from 'react-router-dom'
+import { About, SignIn, SignUp, Home, Profile } from './components/exportComp.js'
 function App() {
   return (
-    <div>
-      <h1 className='text-red-300'>App</h1>
-      <p>hello</p>
+    <div className='h-scree'>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/signin' element={<SignIn />} />
+        <Route path='/signup' element={<SignUp />} /> 
+        <Route path='/profile' element={<Profile />} /> 
+      </Routes>
+    
     </div>
   )
 }
