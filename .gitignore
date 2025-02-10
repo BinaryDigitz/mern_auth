@@ -25,3 +25,4 @@ dist-ssr
 client/package-lock.json
 client/vite.config.js
 client/eslint.config.js
+.env
