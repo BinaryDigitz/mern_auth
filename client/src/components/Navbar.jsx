@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 function Navbar() {
   return (
     <nav className='bg-slate-200  p-4 min-h-14 text-black flex items-center justify-around'>
-      <h2 className='text-2xl font-bold text-cente'>
+      <h2 className='text-xl font-bold text-cente'>
         Auth App
       </h2>
-      <ul className='flex justify-center space-x-4 text-lg gap-6'>
+      <ul className='flex justify-center space-x-4  gap-6'>
         <li>
           <Link to='/'>Home</Link>
         </li>
