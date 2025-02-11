@@ -2,6 +2,7 @@ import Joi from "joi"
 import { User } from "../model/user.model.js"
 import bcryptjs from 'bcryptjs'
 
+
 function validateUser(user){
     const schema = Joi.object({
         username: Joi.string().min(3).max(30).required(),
@@ -11,7 +12,7 @@ function validateUser(user){
     })
     return schema.validate(user)
 }
-export async function Signup(req, res){
+export async function Signup(req, res, next){
     const { error } = validateUser(req.body)
     if(error) return res.status(400).send(error.details[0].message)
         const { username, email, password } = req.body
@@ -23,6 +24,6 @@ export async function Signup(req, res){
     res.status(201).json({message: 'User created successfully..!'})
   }
   catch(err){
-    res.status(500).json({message:err.message})
+    next(err)
   }
 }
