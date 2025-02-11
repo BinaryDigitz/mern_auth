@@ -19,7 +19,7 @@ const UserSchema = mongoose.Schema({
         required: true,
         type:String,
         minLength:3,
-        maxLength:50
+        maxLength:100
     }
 }, {timestaps: true})
 
