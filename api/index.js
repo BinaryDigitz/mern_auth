@@ -1,16 +1,17 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
+import userRouter from './routes/users.route.js'
+
 
 const app = express()
 app.use(express.json())
 dotenv.config()
 
 const port = process.env.port || 3000
-const db = {
-    username: 'borisndoh',
-    password:'Y79a6Qnx603Lhl4X'
-}
+
+app.use('/api/users', userRouter)
+
 
     mongoose.connect(process.env.MONGO).then(() =>{
     console.log('Connected to database.....');

@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { unique } from "underscore";
+
 
 const UserSchema = mongoose.Schema({
     username:{
